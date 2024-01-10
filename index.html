@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>جعبه ابزار</title>
+  <link rel="icon" href="fav.png" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.fontiran.net/css?family=Vazir:400,700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family: 'Vazir', sans-serif;
+      line-height: 1.4;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* header-classes */
+    .bg-dark {
+      background: #333;
+      color: white;
+    }
+
+    .text-primary {
+      color: lightgreen;
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    #navbar a {
+      color: white;
+    }
+
+    #navbar ul {
+      display: flex;
+      flex-direction: row-reverse;
+      list-style: none;
+      align-items: center;
+    }
+
+    #navbar ul li a {
+      padding: 0.75rem;
+      margin: 0 0.25rem;
+    }
+
+    #navbar ul li a:hover,
+    #navbar ul li a.current {
+      background-color: lightgreen;
+      color: white;
+      border-radius: 12px;
+      /* opacity: 0.8; */
+    }
+
+    /* Define a grid container with three columns and two rows */
+    .grid-container {
+      display: grid;
+      background-color: #f0f0f0;
+      padding: 10px;
+      height: 400px;
+      gap: 15px;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 100px auto;
+    }
+
+    /* Define the grid items */
+    .grid-item {
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    /* Define the new header item to span across all columns */
+    .header {
+      grid-column: 1 / 4;
+    }
+
+    /* Define the footer item to span across all columns */
+    .footer {
+      grid-column: 1 / 4;
+    }
+
+    /* Define a flex container for the main content */
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+ /* Define the flex items */
+.flex-item {
+  width: 80%;
+  margin: 10px;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  font-size: 20px;
+}
+
+/* Define a new class for the <a> tags */
+.flex-item a {
+  display: block; /* This makes the entire div clickable */
+  text-decoration: none; /* This removes the underline */
+  color: inherit; /* This ensures the text color remains the same */
+}
+
+
+    /* Use media queries to make the layout responsive */
+    @media (max-width: 600px) {
+      /* Change the grid container to a single column */
+      .grid-container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+      }
+
+      /* Change the header and footer items to fit the new column */
+      .header {
+        grid-column: 1 / 2;
+      }
+
+      .footer {
+        grid-column: 1 / 2;
+      }
+
+      /* Change the flex direction to row */
+      .flex-container {
+        flex-direction: row;
+      }
+
+      /* Change the flex items to fit the new row */
+      .flex-item {
+        width: 40%;
+        
+      }
+    }
+  </style>
+</head>
+<body>
+   <div class="grid-container">
+    <div class="grid-item header" id="navbar">
+      <h1 class="logo">
+        <a href="index.html"><span class="text-primary">جعبه ابزار</span></a>
+      </h1>
+      <ul>
+        <li><a href="index.html" class="current">خانه</a></li>
+       </ul>
+    </div>
+    <div class="grid-item">به سایت جعبه ابزار خوش آمدید. روی هر ابزاری که می خواهید استفاده کنید کلیک کنید</div>
+    <div class="grid-item flex-container">
+    <div class="flex-item"><a href="prime.html">یافتن اعداد اول</a></div>
+		<div class="flex-item"><a href="power.html">محاسبه توان دو عدد</a></div>
+			<div class="flex-item"><a href="multi.html">محاسبه ضرب</a></div>
+
+
+    </div>
+    <div class="grid-item">ابزار هایی که می بینید همه به ریاضی ربط دارند. ابزار توان و ضرب طوری طراحی شده اند تا توانایی محاسبه اعداد بسیار بزرگ را داشته باشند</div>
+    <div class="grid-item footer">طراحی شده توسط دانشجو آرمین افراشته برای درس طراحی وب استاد محمدحسین فاطمی راد</div>
+  </div>
+</body>
+</html>
+
+
